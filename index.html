@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
+        <title>Portfolio</title>
+    </head>
+
+    <body>
+        <!-- Contenu de la page -->
+        <main>
+            <!-- La partie gauche du portfolio -->
+            <section class="left_section">
+
+                <!--En-tête de la page du portfolio-->
+                <header>
+                    <img src="img/picture.jpg" alt="Une photo de profil">
+                    <h1>Seifeddine Maachaoui</h1>
+
+                    <!-- Navigation sur le site-->
+                    <nav>
+                        <a href="#home">Home</a>
+                        <a href="#about">About me</a>
+                        <a href="#cv">CV</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
+
+                    <!-- Réseaux sociaux -->
+                    <div class="social_links">
+                        <a href="https://www.linkedin.com/in/smaachaoui/" target="_blank">
+                            <img src="img/linkedin-icon.svg" alt="Un lien vers mon profil Linkedin">
+                        </a>
+
+                        <a href="https://github.com/smaachaoui" target="_blank">
+                            <img src="img/github-icon.svg" alt="Un lien vers mon profil Github">
+                        </a>
+                    </div>
+                </header>
+
+            </section>
+
+            <!-- La partie droite du portfolio -->
+            <section class="right_section">
+
+                <!-- Accueil -->
+                <article id="home">
+                    <img src="img/Logo.png" alt="Un logo personnalisé">
+                    <p>Hi, I'm web developer !</p>
+                </article>
+
+                <!-- Des informations à propos de moi -->
+                <article id="about">
+                    <h2>About me</h2>
+                    <p>Après avoir travaillé dans le secteur de la relation client,<br>j’ai décidé de me réorienter vers le développement web.</p>
+                    <p>Ce qui me passionne dans ce domaine, c’est le fait de concevoir des sites et<br>des applications modernes à la fois fonctionnelles et adaptées à des besoins spécifiques.</p>
+                    <p>C'est dans ce but que je me forme et que je souhaite en faire mon métier.</p>
+                </article>
+
+                <!-- Un aperçu de mon CV et le lien pour le télécharger -->
+                <article id="cv">
+                    <h2>CV</h2>
+                    <p>Experience</p>
+                </article>
+
+                <!-- Mes réalisations -->
+                <article id="projects">
+                    <h2>Projects</h2>
+                    <div class="projects_container">
+                        <div class="work"></div>
+                        <div class="work"></div>
+                        <div class="work"></div>
+                        <div class="work"></div>
+                        <div class="work"></div>
+                        <div class="work"></div>
+                    </div>
+                </article>
+
+                <!-- Mes compétences -->
+                <article id="skills">
+                    <h2>Skills</h2>
+                    <div class="skills_container">
+                        <img src="img/html-5.png" alt="Un logo HTML">
+                        <img src="img/css-3.png" alt="Un logo CSS">
+                        <img src="img/php.png" alt="Un logo PHP">
+                        <img src="img/mysql.png" alt="Un logo MySQL">
+                        <img src="img/js.png" alt="Un logo JavaScript">
+                        <img src="img/figma.png" alt="Un logo Figma">
+                    </div>
+                </article>
+
+                <!-- Formulaire de contact -->
+                <article id="contact">
+                    <h2>Contact me</h2>
+
+                    <form action="" method="post">
+
+                        <p>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="user_name">
+                        </p>
+
+                        <p>
+                            <label for="mail">Email:</label>
+                            <input type="email" id="mail" name="user_email" placeholder="Veuillez saisir une adresse mail valide" required="">
+                        </p>
+
+                        <p>
+                            <label for="msg">Message:</label>
+                            <textarea id="msg" cols="30" rows="10" name="user_message"></textarea>
+                        </p>
+
+                        <button type="submit">Envoyer</button>
+                    </form>
+                    
+                </article>
+
+                <!-- Le pied de page du portfolio-->
+                <footer>
+                    <p>© 2025 - 2026 | Seifeddine Maachaoui | Tous les droits réservés.</p>
+                </footer>
+
+            </section>
+
+        </main>
+
+    </body>
+
+</html>
