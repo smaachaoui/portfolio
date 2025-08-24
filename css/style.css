@@ -336,11 +336,11 @@ ul li {
         width: 100%;
     }
 
-    
 
     .cv_container, .projects_container, .skills_container{
         grid-template-columns: 1fr 1fr;
     }
+    
 
     .skills_container{
         justify-items: center;
