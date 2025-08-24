@@ -1,271 +1,253 @@
 /* Importation de la police de caractère Federo */
+
 @import url('https://fonts.googleapis.com/css2?family=Federo&display=swap');
 
-/* ##################################################################### */
-/* ###################### Règles de style général ###################### */
-/* ##################################################################### */
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html{
-    scroll-behavior: smooth;
-}
-
-body{
-    background-color:#000000;
-    font-family: "Federo", sans-serif;
-}
-
-main{
-    display: grid;
-    grid-template-columns: 300px auto;
-}
-
-header{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1em;
-}
-
-footer{
-    text-align: center;
-    width: 100%;
-    padding: 1em;
-    border: 1px solid #c9ac81;
-}
-
-h1, h2, h3{
-    padding: 1em;
-    color: white;
-    text-align: center;
-}
-
-p{
-    padding: 1em;
-    color: white;
-}
-
-a{
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    margin: 1em;
-}
-
-a:hover{
-    color: #c9ac81;
-}
-
-
-ul{
-    padding: 1em;
-}
-
-ul li{
-    color: white;
-    text-align: left;
-}
 
 /* ##################################################################### */
-/* ################## Règles de style pour les classes ################# */
+/* ###################### RÈGLES DE STYLES GÉNÉRAL ##################### */
 /* ##################################################################### */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html {
+  scroll-behavior: smooth;
+}
 
+body {
+  background-color: #000;
+  font-family: "Federo", sans-serif;
+  color: white;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 300px auto;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1em;
+}
+
+footer {
+  border: 1px solid #c9ac81;
+  width: 100%;
+}
+
+h1, h2, h3, p, ul {
+  padding: 1em;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin: 1em;
+}
+
+a:hover {
+  color: #c9ac81;
+}
+
+ul li {
+  text-align: left;
+}
 
 /* ##################################################################### */
 /* ##################### PARTIE GAUCHE DU PORTFOLIO #################### */
 /* ##################################################################### */
 
-.left_section{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid #c9ac81;
-    position: sticky;
-    top: 0;
+.left_section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #c9ac81;
+  position: sticky;
+  top: 0;
 }
 
-.mypicture{
-    width: 150px;
-    height: 150px;
-    border: 1px solid #c9ac81;
-    border-radius: 50%;
+.mypicture {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #c9ac81;
+  border-radius: 50%;
 }
 
-.header_nav{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.header_nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.social_links{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 1em;
+.social_links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1em;
 }
 
-.github_logo{
-    fill: white;
+.github_logo {
+  fill: white;
 }
 
 /* ##################################################################### */
 /* ##################### PARTIE DROITE DU PORTFOLIO #################### */
 /* ##################################################################### */
 
-.right_section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
+.right_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
 }
 
-#home{
-    height: 100vh;
-    text-align: center;
-}
 
-#about, #cv, #projects, #skills, #contact{
-    padding: 1em;
-    margin: 2em;
-    border: 1px solid #c9ac81;
-    box-shadow: 1px 1px 30px #c9ac81;
-    background-color: #1f1f1f;
-    text-align: center;
+/* ##################################################################### */
+/* ############################## ACCUEIL ############################## */
+/* ##################################################################### */
+
+#home {
+  height: 100vh;
+  text-align: center;
 }
 
 /* ##################################################################### */
-/* ################################# CV ################################ */
+/* ######################## GESTION DES ARTICLES ####################### */
 /* ##################################################################### */
 
-.cv_container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin: 2em;
+#about, #cv, #projects, #skills, #contact {
+  margin: 2em;
+  padding: 1em;
+  border: 1px solid #c9ac81;
+  box-shadow: 1px 1px 30px #c9ac81;
+  background-color: #1f1f1f;
+}
+
+/* ##################################################################### */
+/* ##################### CV, PARCOURS, EXPERIENCES ##################### */
+/* ##################################################################### */
+
+.cv_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 2em;
 }
 
 .cv_content {
-    padding: 1em;
-    text-align: left;
-    color: black;
-    background-color: #c9ac81;
-    border-radius: 15px;
+  padding: 1em;
+  background-color: #c9ac81;
+  border-radius: 15px;
+  color: #000;
+  text-align: left;
 }
 
-.cv_content p, .cv_content li{
-    color: #000000;
+.cv_content p, .cv_content li {
+  color: #000;
 }
 
-
-.download_container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.download_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.download_container h4{
-    color: white;
+.download_container h4 {
+  color: white;
 }
 
-.download_btn{
-    padding: 1em;
-    background-color: #404040;
-    border-radius: 15px;
+.download_btn {
+  padding: 1em;
+  background-color: #404040;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .download_btn:hover {
-    background-color: #c9ac81;
-    color: black;
-    transform: scale(1.05);
-    transition: all 0.3s ease;
-    cursor: pointer;
+  background-color: #c9ac81;
+  color: black;
+  transform: scale(1.05);
 }
 
-
-
 /* ##################################################################### */
-/* ############################## PROJECTS ############################# */
+/* ############################ MES PROJETS ############################ */
 /* ##################################################################### */
 
-.projects_container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    padding: 1em;
+.projects_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 1em;
 }
 
 .work {
-    width: 200px;
-    height: 200px;
-    border: 1px solid #c9ac81;
-    margin-left: auto;
-    margin-right: auto;
-    transition: transform 0.3s ease;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #c9ac81;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
 }
 
-.work:hover{
-    transform: scale(1.2);
+.work:hover {
+  transform: scale(1.2);
 }
 
 /* ##################################################################### */
-/* ############################### SKILLS ############################## */
+/* ########################## LES COMPÉTENCES ########################## */
 /* ##################################################################### */
 
 #skills {
-    background-color: #3d3d3d;
+  background-color: #3d3d3d;
 }
 
-.skills_container{
-    padding: 1em;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+.skills_container {
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 }
 
-.skill_logo{
-    max-width: 80px;
+.skill_logo {
+  max-width: 80px;
 }
 
 /* ##################################################################### */
-/* ############################# CONTACT ME ############################ */
+/* ###################### LE FORMULAIRE DE CONTACT ##################### */
 /* ##################################################################### */
 
-
-#contact form{
-    padding: 3em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#contact form {
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-
-#contact label{
-    padding: 0.5em;
+#contact label {
+  padding: 0.5em;
 }
 
-#contact input, textarea{
-    padding: 0.5em;
-    border: 1px solid #c9ac81;
-    background-color: #1a1a1a;
-    color: white;
-    vertical-align: top;
-    box-sizing: border-box;
+#contact input,
+#contact textarea {
+  padding: 0.5em;
+  border: 1px solid #c9ac81;
+  background-color: #1a1a1a;
+  color: white;
+  box-sizing: border-box;
+  vertical-align: top;
 }
 
-#contact button{
-    padding: 1em;
-    border: #000000;
-    background-color: #c9ac81;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
+#contact button {
+  padding: 1em;
+  background-color: #c9ac81;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
 }
