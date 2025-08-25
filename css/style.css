@@ -442,6 +442,14 @@ ul li {
     justify-items: center;
     align-items: center;
   }
+
+  #contact form{
+    padding: 1em;
+  }
+
+  form button{
+    margin: 2em;
+  }
       
 
 }
