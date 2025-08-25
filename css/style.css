@@ -324,7 +324,7 @@ ul li {
   }
 
   #home img{
-  width: 300px;
+  width: 250px;
   }
 
   #home,
@@ -333,7 +333,10 @@ ul li {
   #projects, 
   #skills, 
   #contact{
-    width: 100%;
+    font-size: 14px;
+    padding: 1em;
+    margin: 2em;
+
   }
 
 
@@ -347,6 +350,18 @@ ul li {
     align-items: center;
   }
       
+  .skills_container{
+    justify-items: center;
+    align-items: center;
+  }
+
+  #contact form{
+    padding: 1em;
+  }
+
+  form button{
+    margin: 2em;
+  }
 
 }
 
@@ -422,6 +437,7 @@ ul li {
     padding: 1em;
     margin: 2em;
   }
+  
 
   .cv_container{
     grid-template-columns: 1fr;
