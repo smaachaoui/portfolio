@@ -421,8 +421,12 @@ ul li {
     width: 100%;
   }
 
+  .cv_container{
+    grid-template-columns: 1fr;
+  }
 
-  .cv_container, .projects_container, .skills_container{
+
+  .projects_container, .skills_container{
     grid-template-columns: 1fr 1fr;
   }
 
