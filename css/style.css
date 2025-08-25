@@ -367,7 +367,7 @@ ul li {
 
 /* Pour les smartphones */
 
-@media (min-width: 480px) and (max-width: 800px){
+@media (min-width: 400px) and (max-width: 800px){
 
   main{
     display: flex;
