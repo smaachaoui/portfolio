@@ -409,7 +409,7 @@ ul li {
   }
 
   #home img{
-  width: 300px;
+  width: 250px;
   }
 
   #home,
@@ -418,7 +418,9 @@ ul li {
   #projects, 
   #skills, 
   #contact{
-    width: 100%;
+    font-size: 12px;
+    padding: 1em;
+    margin: 2em;
   }
 
   .cv_container{
