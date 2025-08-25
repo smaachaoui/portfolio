@@ -259,101 +259,183 @@ ul li {
 /* Pour les tablettes */
 
 @media (min-width: 600px) and (max-width: 1024px){
-    main{
-      display: flex;
-      flex-direction: column;
-    }
+  main{
+    display: flex;
+    flex-direction: column;
+  }
 
-    /* RESPONSIVE DESIGN POUR LA SECTION GAUCHE DU PORTFOLIO */
-    .left_section{
-      height: 80px;
-      display: flex;
-      flex-direction: row;
-      border: none;
-      border-bottom: 1px solid #c9ac81;
-      background-color: #000;
-    }
+  /* RESPONSIVE DESIGN POUR LA SECTION GAUCHE DU PORTFOLIO */
+  .left_section{
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    border: none;
+    border-bottom: 1px solid #c9ac81;
+    background-color: #000;
+  }
 
-    header{
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-    }
+  header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 
-    header h1{
-      display: none;
-    }
+  header h1{
+    display: none;
+  }
 
-    header a{
-      font-size: 13px;
-      padding: 0;
-    }
+  header a{
+    font-size: 13px;
+    padding: 0;
+  }
 
-    .mypicture{
-      width: 40px;
-      height: 40px;
-      padding: 0;
-    }
-    
+  .mypicture{
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+  
 
-    .header_nav{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      margin: 2em;
-       
-    }
+  .header_nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2em;
+      
+  }
 
-    .social_links{
-      justify-content: center;
-      padding: 0;
-    }
-    
-    .social_links svg{
-      width: 20px;
-      height: 20px;
-    }
+  .social_links{
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .social_links svg{
+    width: 20px;
+    height: 20px;
+  }
 
-    /* RESPONSIVE DESIGN POUR LA PARTIE DROITE DU PORTFOLIO */
-    
+  /* RESPONSIVE DESIGN POUR LA PARTIE DROITE DU PORTFOLIO */
+  
 
-    #home{
-      height: 40vh;
-    }
+  #home{
+    height: 40vh;
+  }
 
-    #home img{
-    width: 300px;
-    }
+  #home img{
+  width: 300px;
+  }
 
-    #home,
-    #about, 
-    #cv, 
-    #projects, 
-    #skills, 
-    #contact{
-      width: 100%;
-    }
+  #home,
+  #about, 
+  #cv, 
+  #projects, 
+  #skills, 
+  #contact{
+    width: 100%;
+  }
 
 
-    .cv_container, .projects_container, .skills_container{
-      grid-template-columns: 1fr 1fr;
-    }
-    
+  .cv_container, .projects_container, .skills_container{
+    grid-template-columns: 1fr 1fr;
+  }
+  
 
-    .skills_container{
-      justify-items: center;
-      align-items: center;
-    }
+  .skills_container{
+    justify-items: center;
+    align-items: center;
+  }
       
 
 }
 
 /* Pour les smartphones */
 
-    @media (min-width: 480px) and (max-width: 800px){
+@media (min-width: 480px) and (max-width: 800px){
 
-
+  main{
+    display: flex;
+    flex-direction: column;
+  }
       
-    }
+  .left_section{
+    height: 70px;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #c9ac81;
+    background-color: #000;
+  }
+
+  header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header h1, .mypicture{
+    display: none;
+  }
+
+  header a{
+    font-size: 10px;
+    padding: 0;
+  }
+  
+
+  .header_nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.5em;
+      
+  }
+
+  .social_links{
+    justify-content: center;
+    padding: 0;
+  }
+    
+  .social_links svg{
+    width: 20px;
+    height: 20px;
+  }
+
+  #home{
+    height: 40vh;
+  }
+
+  #home img{
+  width: 300px;
+  }
+
+  #home,
+  #about, 
+  #cv, 
+  #projects, 
+  #skills, 
+  #contact{
+    width: 100%;
+  }
+
+
+  .cv_container, .projects_container, .skills_container{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .work{
+    width: 150px;
+    height: 150px;
+  }
+  
+
+  .skills_container{
+    justify-items: center;
+    align-items: center;
+  }
+      
+
+}
