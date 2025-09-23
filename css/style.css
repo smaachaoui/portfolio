@@ -23,11 +23,12 @@ body {
   color: white;
 }
 
-header{
-  height: 100vh;
+header {
+  height: 100vh; /* Remplace height fixe pour éviter chevauchement */
   position: sticky;
   top: 0;
 }
+
 
 header, footer {
   text-align: center;
@@ -44,7 +45,7 @@ main {
 }
 
 article{
-  margin: 2em;
+  margin: 1em;
   padding: 2em;
   border: 1px solid #c9ac81;
   box-shadow: 1px 1px 30px #c9ac81;
@@ -53,8 +54,8 @@ article{
 
 
 h1, h2, h3, p, ul {
-  padding: 1em;
   text-align: center;
+  padding: 0.5em;
 }
 
 p{
@@ -79,9 +80,11 @@ a:hover {
 
 .container {
   width: 100%;
+  max-width: 100%; /* Limite largeur pour éviter débordement */
   display: grid;
   grid-template-columns: 300px auto;
   gap: 20px;
+  overflow-wrap: break-word; /* Prévention débordement texte */
 }
 
 .mypicture {
@@ -124,8 +127,8 @@ a:hover {
 
 
 .logo{
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
 }
 
 
@@ -137,7 +140,10 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+  max-width: 100%; /* Ajout pour éviter débordement */
+  overflow-wrap: break-word;
 }
+
 
 .cv_content {
   padding: 1em;
@@ -182,18 +188,24 @@ a:hover {
 
 .projects_container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colonnes adaptatives */
   gap: 40px;
   padding: 1em;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
+
 .work {
-  width: 200px;
-  height: 200px;
+  max-width: 100%; /* Adaptation à son conteneur */
+  width: 100%;     /* Taille fluide */
+  height: auto;    /* Adaptation hauteur */
+  aspect-ratio: 1 / 1; /* Maintient carré */
   border: 1px solid #c9ac81;
   margin: 0 auto;
   transition: transform 0.3s ease;
 }
+
 
 .work:hover {
   transform: scale(1.2);
@@ -222,10 +234,10 @@ a:hover {
 
 #contact form {
   padding: 3em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 100%; /* Ajout pour limiter largeur */
+  box-sizing: border-box;
 }
+
 
 #contact label {
   padding: 0.5em;
@@ -256,7 +268,7 @@ a:hover {
 
 /* Pour les tablettes */
 
-@media (min-width: 600px) and (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 1024px){
 
   /* RESPONSIVE DESIGN POUR LA SECTION GAUCHE DU PORTFOLIO */
 
@@ -266,7 +278,7 @@ a:hover {
   }
 
   header{
-    height: 120px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -280,34 +292,34 @@ a:hover {
   }
 
   header a{
-    font-size: 16px;
+    font-size: 13px;
     padding: 0;
   }
 
   .mypicture{
-    width: 40px;
-    height: 40px;
-    padding: 0;
+    display: none;
   }
 
   
 
   .header_nav{
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: 0.5em;
       
   }
 
   .social_links{
+    width: 30%;
     justify-content: center;
     padding: 0;
   }
   
   .social_links svg{
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
   }
 
   /* RESPONSIVE DESIGN POUR LA PARTIE DROITE DU PORTFOLIO */
@@ -315,13 +327,15 @@ a:hover {
 
   .home{
     height: 40vh;
-    padding: 2em;
+    padding: 0;
   }
 
   /* LE LOGO DU PORTFOLIO */
-  .logo{
-  width: 250px;
+  .logo {
+    width: 250px;  /* Réduction taille */
+    height: 250px; /* Même proportion */
   }
+
 
 
   /* LES SECTIONS DU PORTFOLIO */
@@ -330,11 +344,14 @@ a:hover {
   #cv, 
   #projects, 
   #skills, 
-  #contact{
+  #contact {
     font-size: 15px;
-    padding: 3.5em;
-    margin: 2em;
+    padding: 1.5em; /* Réduction du padding */
+    margin: 3em;    /* Réduction marges */
+  }
 
+  .work{
+    width: 250px;
   }
 
 
@@ -362,14 +379,14 @@ a:hover {
 
 /* Pour les smartphones */
 
-@media (min-width: 360px) and (max-width: 599px){
+@media (min-width: 360px) and (max-width: 767px){
 
   /* RESPONSIVE GÉNÉRAL */
 
 
   header{
     width: 100%;
-    height: 70px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -388,9 +405,10 @@ a:hover {
   }
 
   article{
-    width: 350px;
-    padding: 0.5em;
-    margin: 2em;
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5em;
+    margin: 1em;
   }
 
 
@@ -418,7 +436,8 @@ a:hover {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
+    margin: 0.5em;
       
   }
 
@@ -437,14 +456,14 @@ a:hover {
   
 
   .home{
-    height: 60vh;
+    height: 40vh;
     padding: 0;
   }
 
   /* LE LOGO DU PORTFOLIO */
   .logo{
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   }
 
 
@@ -454,13 +473,18 @@ a:hover {
   #cv, 
   #projects, 
   #skills, 
-  #contact{
-    width: 400px;
+  #contact {
+    width: 100%;       
+    max-width: 400px;  
     font-size: 15px;
-    padding: em;
-    margin: 1em;
-
+    padding: 1em;     
+    margin: 2em;
   }
+
+  .work{
+    width: 200px;
+  }
+
 
 
   .cv_container, .projects_container, .skills_container{
@@ -468,12 +492,9 @@ a:hover {
     gap: 20px;
   }
 
-  .cv_content{
-    margin: 0.7em;
+  .cv_content {
+    margin: 1em; /* Légère augmentation pour meilleure lisibilité */
   }
-
-
-  
 
   .skills_container{
     justify-items: center;
