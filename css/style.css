@@ -198,7 +198,7 @@ a:hover {
 
 .projects_container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colonnes adaptatives */
+  grid-template-columns: 1fr 1fr 1fr; /* Colonnes adaptatives */
   gap: 40px;
   padding: 1em;
   max-width: 100%;
@@ -207,10 +207,8 @@ a:hover {
 
 
 .work {
-  max-width: 100%; /* Adaptation à son conteneur */
-  width: 100%;     /* Taille fluide */
-  height: auto;    /* Adaptation hauteur */
-  aspect-ratio: 1 / 1; /* Maintient carré */
+  width: 200px;
+  height: 200px;   
   border: 1px solid #c9ac81;
   margin: 0 auto;
   transition: transform 0.3s ease;
