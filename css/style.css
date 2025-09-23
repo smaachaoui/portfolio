@@ -45,7 +45,7 @@ main {
 
 article{
   margin: 2em;
-  padding: 1em;
+  padding: 2em;
   border: 1px solid #c9ac81;
   box-shadow: 1px 1px 30px #c9ac81;
   background-color: #303030;
@@ -116,6 +116,7 @@ a:hover {
 /* ##################################################################### */
 
 .home{
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,7 +127,6 @@ a:hover {
   width: 400px;
   height: 400px;
 }
-
 
 
 /* ##################################################################### */
@@ -257,35 +257,30 @@ a:hover {
 /* Pour les tablettes */
 
 @media (min-width: 600px) and (max-width: 1024px){
-  main{
-    display: flex;
-    flex-direction: column;
-  }
 
   /* RESPONSIVE DESIGN POUR LA SECTION GAUCHE DU PORTFOLIO */
+
   .container{
-    height: 80px;
-    display: flex;
-    flex-direction: row;
-    border: none;
-    border-bottom: 1px solid #c9ac81;
-    background-color: #000;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   header{
-    width: 100%;
+    height: 120px;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: #000;
+    padding: 1.5em;
   }
+
 
   header h1{
     display: none;
   }
 
   header a{
-    font-size: 13px;
+    font-size: 16px;
     padding: 0;
   }
 
@@ -294,13 +289,14 @@ a:hover {
     height: 40px;
     padding: 0;
   }
+
   
 
   .header_nav{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 2em;
+    margin: 0.5em;
       
   }
 
@@ -310,29 +306,33 @@ a:hover {
   }
   
   .social_links svg{
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
   }
 
   /* RESPONSIVE DESIGN POUR LA PARTIE DROITE DU PORTFOLIO */
   
 
-  #home{
+  .home{
     height: 40vh;
+    padding: 2em;
   }
 
-  #home img{
+  /* LE LOGO DU PORTFOLIO */
+  .logo{
   width: 250px;
   }
 
+
+  /* LES SECTIONS DU PORTFOLIO */
   #home,
   #about, 
   #cv, 
   #projects, 
   #skills, 
   #contact{
-    font-size: 14px;
-    padding: 1em;
+    font-size: 15px;
+    padding: 3.5em;
     margin: 2em;
 
   }
@@ -340,6 +340,7 @@ a:hover {
 
   .cv_container, .projects_container, .skills_container{
     grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
   
 
@@ -361,105 +362,131 @@ a:hover {
 
 /* Pour les smartphones */
 
-@media (min-width: 360px) and (max-width: 800px){
+@media (min-width: 360px) and (max-width: 599px){
 
-  main{
-    display: flex;
-    flex-direction: column;
-  }
-      
-  .left_section{
-    height: 70px;
-    padding: 1em;
-    display: flex;
-    flex-direction: row;
-    border-bottom: 1px solid #c9ac81;
-    background-color: #000;
-  }
+  /* RESPONSIVE GÉNÉRAL */
+
 
   header{
     width: 100%;
+    height: 70px;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: #000;
+    padding: 1em;
   }
 
-  header h1, .mypicture{
+  header h1{
     display: none;
   }
 
   header a{
-    font-size: 10px;
-    padding: 0;
+    font-size: 12px;
+    margin: 0;
+    padding: 0.5em;
   }
-  
 
+  article{
+    width: 350px;
+    padding: 0.5em;
+    margin: 2em;
+  }
+
+
+  /* RESPONSIVE DESIGN POUR LES CLASSES */
+
+
+  /* CONTENEUR DE LA PAGE */
+
+  .container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+  /* RESPONSIVE HEADER */
+
+  .mypicture{
+    display: none;
+  }
+
+  
   .header_nav{
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 0.5em;
       
   }
 
   .social_links{
+    width: 30%;
     justify-content: center;
     padding: 0;
   }
-    
+  
   .social_links svg{
     width: 20px;
     height: 20px;
   }
 
-  #home{
-    height: 40vh;
+  /* RESPONSIVE DESIGN POUR LA PARTIE DROITE DU PORTFOLIO */
+  
+
+  .home{
+    height: 60vh;
+    padding: 0;
   }
 
-  #home img{
+  /* LE LOGO DU PORTFOLIO */
+  .logo{
   width: 250px;
+  height: 250px;
   }
 
+
+  /* LES SECTIONS DU PORTFOLIO */
   #home,
   #about, 
   #cv, 
   #projects, 
   #skills, 
   #contact{
-    font-size: 12px;
-    padding: 1em;
-    margin: 2em;
-  }
-  
+    width: 400px;
+    font-size: 15px;
+    padding: em;
+    margin: 1em;
 
-  .cv_container{
+  }
+
+
+  .cv_container, .projects_container, .skills_container{
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cv_content{
+    margin: 0.7em;
   }
 
 
-  .projects_container, .skills_container{
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .work{
-    width: 150px;
-    height: 150px;
-  }
   
 
   .skills_container{
     justify-items: center;
     align-items: center;
   }
+      
 
   #contact form{
     padding: 1em;
   }
 
   form button{
-    margin: 2em;
+    margin: 1.5em;
   }
-      
 
 }
