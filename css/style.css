@@ -1,7 +1,5 @@
 /* Importation de la police de caractère Federo */
-
 @import url('https://fonts.googleapis.com/css2?family=Federo&display=swap');
-
 
 /* ##################################################################### */
 /* ###################### RÈGLES DE STYLES GÉNÉRAL ##################### */
@@ -24,19 +22,21 @@ body {
 }
 
 header {
-  height: 100vh; /* Remplace height fixe pour éviter chevauchement */
+  height: 100vh; 
   position: sticky;
   top: 0;
-}
-
-
-header, footer {
   text-align: center;
-  padding: 1em;
+  padding: 1rem;
   width: 100%;
   border: 1px solid #c9ac81;
 }
 
+footer {
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  border: 1px solid #c9ac81;
+}
 
 main {
   display: flex;
@@ -44,21 +44,22 @@ main {
   align-items: center;
 }
 
-article{
-  margin: 1em;
-  padding: 2em;
+article {
+  margin: 1rem;
+  padding: 2rem;
   border: 1px solid #c9ac81;
   box-shadow: 1px 1px 30px #c9ac81;
   background-color: #303030;
+  width: 100%;
+  max-width: 100%;
 }
-
 
 h1, h2, h3, p, ul {
   text-align: center;
-  padding: 0.5em;
+  padding: 0.5rem;
 }
 
-p{
+p {
   font-size: 20px;
 }
 
@@ -66,13 +67,12 @@ a {
   text-decoration: none;
   color: white;
   font-size: 17px;
-  margin: 1em;
+  margin: 1rem;
 }
 
 a:hover {
   color: #c9ac81;
 }
-
 
 /* ##################################################################### */
 /* ##################### PARTIE GAUCHE DU PORTFOLIO #################### */
@@ -80,11 +80,10 @@ a:hover {
 
 .container {
   width: 100%;
-  max-width: 100%; /* Limite largeur pour éviter débordement */
+  max-width: 100%; 
   display: grid;
-  grid-template-columns: 300px auto;
+  grid-template-columns: 300px 1fr;
   gap: 20px;
-  overflow-wrap: break-word; /* Prévention débordement texte */
 }
 
 .mypicture {
@@ -104,43 +103,40 @@ a:hover {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 1em;
+  padding: 1rem;
 }
-
 
 /* ##################################################################### */
 /* ##################### LES SECTIONS DU PORTFOLIO #################### */
 /* ##################################################################### */
 
- /* LES SECTIONS DU PORTFOLIO */
-  #home,
-  #about, 
-  #cv, 
-  #projects, 
-  #skills, 
-  #contact {
-    font-size: 17px;
-    padding: 1em; 
-    margin: 2em;    
-  }
+#home,
+#about, 
+#cv, 
+#projects, 
+#skills, 
+#contact {
+  font-size: 17px;
+  padding: 1rem; 
+  margin: 2rem;    
+}
 
 /* ##################################################################### */
 /* ############################## ACCUEIL ############################## */
 /* ##################################################################### */
 
-.home{
+.home {
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-
-.logo{
+.logo {
   width: 300px;
   height: 300px;
 }
-
 
 /* ##################################################################### */
 /* ##################### CV, PARCOURS, EXPERIENCES ##################### */
@@ -148,22 +144,21 @@ a:hover {
 
 .cv_container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  max-width: 100%; /* Ajout pour éviter débordement */
-  overflow-wrap: break-word;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  width: 100%;
 }
 
-
 .cv_content {
-  padding: 1em;
+  padding: 1rem;
   background-color: #c9ac81;
   border-radius: 15px;
   color: #000;
   text-align: left;
 }
 
-.cv_content p, .cv_content li {
+.cv_content p, 
+.cv_content li {
   color: #000;
 }
 
@@ -171,15 +166,16 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 2rem;
 }
 
 .download_container h4 {
   color: white;
-  margin: 1em;
+  margin: 1rem;
 }
 
 .download_btn {
-  padding: 1em;
+  padding: 1rem;
   background-color: #404040;
   border-radius: 15px;
   transition: all 0.3s ease;
@@ -198,42 +194,63 @@ a:hover {
 
 .projects_container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* Colonnes adaptatives */
-  gap: 40px;
-  padding: 1em;
-  max-width: 100%;
-  overflow-wrap: break-word;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  padding: 1rem;
+  width: 100%;
+  justify-items: center;
 }
-
 
 .work {
-  width: 200px;
-  height: 200px;   
+  width: 100%;
+  max-width: 250px;
+  aspect-ratio: 1 / 1;
   border: 1px solid #c9ac81;
-  margin: 0 auto;
   transition: transform 0.3s ease;
+  overflow: hidden;
+  background-color: #1a1a1a;
 }
 
+.work a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.work img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.work img:hover{
+  opacity: 60%;
+}
 
 .work:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 
 /* ##################################################################### */
 /* ########################## LES COMPÉTENCES ########################## */
 /* ##################################################################### */
 
-
-
 .skills_container {
-  padding: 1em;
+  padding: 1rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 2.5rem;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
 }
 
 .skill_logo {
   max-width: 80px;
+  height: auto;
 }
 
 /* ##################################################################### */
@@ -241,113 +258,194 @@ a:hover {
 /* ##################################################################### */
 
 #contact form {
-  padding: 3em;
-  max-width: 100%; /* Ajout pour limiter largeur */
-  box-sizing: border-box;
+  padding: 3rem 1rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-
 #contact label {
-  padding: 0.5em;
+  padding: 0.5rem 0;
+  display: block;
 }
 
 #contact input,
 #contact textarea {
-  padding: 0.5em;
+  width: 100%;
+  padding: 0.75rem;
   border: 1px solid #c9ac81;
   background-color: #1a1a1a;
   color: white;
-  box-sizing: border-box;
-  vertical-align: top;
+  border-radius: 5px;
+  font-family: "Federo", sans-serif;
+}
+
+#contact textarea {
+  resize: vertical;
+  min-height: 150px;
 }
 
 #contact button {
-  padding: 1em;
+  padding: 1rem 2rem;
   background-color: #c9ac81;
   color: black;
   font-weight: bold;
   cursor: pointer;
   border: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+#contact button:hover {
+  background-color: #b09671;
+  transform: scale(1.05);
 }
 
 /* ##################################################################### */
 /* #################### LA PARTIE RESPONSIVE DESIGN #################### */
 /* ##################################################################### */
 
-/* Pour les tablettes */
+/* Pour les tablettes et écrans moyens */
+@media (max-width: 1024px) {
 
-@media (min-width: 768px) and (max-width: 1024px){
-
-  /* RESPONSIVE DESIGN POUR LA SECTION GAUCHE DU PORTFOLIO */
-
-  .container{
-    display: grid;
+  .container {
     grid-template-columns: 1fr;
   }
 
-  header{
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000;
-    padding: 1.5em;
-  }
-
-
-  header h1{
-    display: none;
-  }
-
-  header a{
-    font-size: 13px;
-    padding: 0;
-  }
-
-  .mypicture{
-    display: none;
-  }
-
-  
-
-  .header_nav{
-    width: 100%;
+  header {
+    height: auto;
+    min-height: 60px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    margin: 0.5em;
-      
+    justify-content: space-between;
+    background-color: #000;
+    padding: 1rem;
+    position: sticky;
   }
 
-  .social_links{
-    width: 30%;
+  header h1 {
+    display: none;
+  }
+
+  header a {
+    font-size: 13px;
+    padding: 0.5rem;
+    margin: 0.25rem;
+  }
+
+  .mypicture {
+    display: none;
+  }
+
+  .header_nav {
+    width: 100%;
+    flex-direction: row;
     justify-content: center;
-    padding: 0;
+    flex-wrap: wrap;
+    margin: 0.5rem 0;
+  }
+
+  .social_links {
+    width: auto;
+    justify-content: center;
+    padding: 0.5rem;
+    gap: 1rem;
   }
   
-  .social_links svg{
+  .social_links svg {
     width: 28px;
     height: 28px;
   }
 
-  /* RESPONSIVE DESIGN POUR LA PARTIE DROITE DU PORTFOLIO */
-  
-
-  .home{
-    height: 40vh;
-    padding: 0;
+  .home {
+    height: 60vh;
+    padding: 2rem;
   }
 
-  /* LE LOGO DU PORTFOLIO */
   .logo {
-    width: 250px;  /* Réduction taille */
-    height: 250px; /* Même proportion */
+    width: 220px;
+    height: 220px;
   }
 
+  #home,
+  #about, 
+  #cv, 
+  #projects, 
+  #skills, 
+  #contact {
+    font-size: 16px;
+    padding: 1.5rem;
+    margin: 1.5rem 0.5rem;
+  }
 
+  article {
+    margin: 1rem 0.5rem;
+    padding: 1.5rem;
+  }
 
-  /* LES SECTIONS DU PORTFOLIO */
+  .cv_container {
+    gap: 2rem;
+  }
+
+  .projects_container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .skills_container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .work {
+    max-width: 220px;
+  }
+
+  #contact form {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Pour les smartphones */
+@media (max-width: 767px) {
+
+  header {
+    padding: 0.75rem 0.5rem;
+  }
+
+  header a {
+    font-size: 11px;
+    padding: 0.4rem;
+    margin: 0.2rem;
+  }
+
+  .social_links {
+    gap: 0.75rem;
+  }
+
+  .social_links svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  article {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  .home {
+    height: 50vh;
+    padding: 1rem;
+  }
+
+  .logo {
+    width: 160px;
+    height: 160px;
+  }
+
   #home,
   #about, 
   #cv, 
@@ -355,167 +453,82 @@ a:hover {
   #skills, 
   #contact {
     font-size: 15px;
-    padding: 1.5em; /* Réduction du padding */
-    margin: 3em;    /* Réduction marges */
+    padding: 1rem;
+    margin: 1rem 0.5rem;
   }
 
-  .work{
-    width: 250px;
+  p {
+    font-size: 18px;
   }
 
-
-  .cv_container, .projects_container, .skills_container{
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-  
-
-  .skills_container{
-    justify-items: center;
-    align-items: center;
-  }
-      
-
-  #contact form{
-    padding: 1em;
+  .cv_container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
-  form button{
-    margin: 2em;
+  .projects_container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
+  .skills_container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .work {
+    max-width: 300px;
+  }
+
+  #contact form {
+    padding: 1.5rem 0.5rem;
+  }
+
+  #contact button {
+    width: 100%;
+  }
 }
 
-/* Pour les smartphones */
-
-@media (min-width: 360px) and (max-width: 767px){
-
-  /* RESPONSIVE GÉNÉRAL */
-
-
-  header{
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000;
-    padding: 0;
-  }
-
-  header h1{
-    display: none;
-  }
-
-  header a{
-    font-size: 10px;
-    margin: 0;
-    padding: 0.2em;
-  }
-
-  article{
-    width: 400px;
-    max-width: 100%;
-    padding: 0.5em;
-    margin: 0.5em;
-  }
-
-
-  /* RESPONSIVE DESIGN POUR LES CLASSES */
-
-
-  /* CONTENEUR DE LA PAGE */
-
-  .container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-
-
-  /* RESPONSIVE HEADER */
-
-  .mypicture{
-    display: none;
-  }
-
+/* Pour les très petits écrans */
+@media (max-width: 480px) {
   
-  .header_nav{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 0.5em;
-      
+  header a {
+    font-size: 10px;
+    padding: 0.3rem;
+    margin: 0.15rem;
   }
 
   .social_links{
-    width: 30%;
-    justify-content: center;
-    padding: 0;
-  }
-  
-  .social_links svg{
-    width: 20px;
-    height: 20px;
+    display: none;
   }
 
-  /* RESPONSIVE DESIGN POUR LA PARTIE DROITE DU PORTFOLIO */
-  
-
-  .home{
-    height: 40vh;
-    padding: 0;
+  .logo {
+    width: 140px;
+    height: 140px;
   }
 
-  /* LE LOGO DU PORTFOLIO */
-  .logo{
-  width: 150px;
-  height: 150px;
+  p {
+    font-size: 16px;
   }
 
-
-  /* LES SECTIONS DU PORTFOLIO */
-  #home,
-  #about, 
-  #cv, 
-  #projects, 
-  #skills, 
-  #contact {
-    width: 100%;       
-    max-width: 400px;  
-    font-size: 14px;
+  article {
+    padding: 0.75rem;
   }
 
-  .work{
-    width: 200px;
-    height: 200px;
+  .skills_container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 
+  .skill_logo {
+    max-width: 60px;
+  }
 
-
-  .cv_container, .projects_container, .skills_container{
-    grid-template-columns: 1fr;
-    gap: 20px;
+  .work {
+    max-width: 100%;
   }
 
   .cv_content {
-    margin: 1em; /* Légère augmentation pour meilleure lisibilité */
+    padding: 0.75rem;
   }
-
-  .skills_container{
-    justify-items: center;
-    align-items: center;
-  }
-      
-
-  #contact form{
-    padding: 1em;
-  }
-
-  form button{
-    margin: 1.5em;
-  }
-
 }
